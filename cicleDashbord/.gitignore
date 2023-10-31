@@ -1,0 +1,5 @@
+# Fichiers QT pro.user
+*.pro.user
+
+# Fichiers générés par le compilateur
+build/
