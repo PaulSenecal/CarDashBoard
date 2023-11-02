@@ -4,4 +4,5 @@ Car DashBoard
 
 Version Actuel : Version Test du DashBord A.0.0.1 
 
-Objectif Lier Transmetre des informations via arduino bluetooth pour le capteur de mouvement et la vitesse
+Objectif : transmettre des informations via arduino Bluetooth pour le capteur de mouvement et la vitesse
+et récupérer ces informations pour les afficher via GUI.
