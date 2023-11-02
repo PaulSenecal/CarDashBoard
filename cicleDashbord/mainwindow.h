@@ -19,13 +19,16 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
-    void paintEvent(QPaintEvent* e);
     int getSpeed();
     void setSpeed(int);
     QPushButton * compteur;
 
-    QLabel *unBackground;
-    QPixmap *unPixBackground ;
+    QLabel *speedMeter;
+    QPixmap *speedMeterBackground ;
+    //test
+    QImage *beforeRotateNeedle;
+    QTransform *rotateNeedle;
+    QImage *afterRotateNeedle;
 
 private slots:
     void on_closeQPushButton_clicked();

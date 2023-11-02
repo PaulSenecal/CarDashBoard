@@ -1,8 +1,8 @@
 <RCC>
     <qresource prefix="/DashBordSpeed">
-        <file>rsc/Group 16.png</file>
+        <file>rsc/speedMeterBackground.png</file>
         <file>rsc/background.png</file>
-        <file>rsc/aiguille.png</file>
-        <file>rsc/auguilleTourner.png</file>
+        <file>rsc/needle.png</file>
+        <file>rsc/rotateNeedle.png</file>
     </qresource>
 </RCC>

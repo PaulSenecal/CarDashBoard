@@ -5,73 +5,31 @@ MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
-    this->setSpeed(0);
+
+    this->setSpeed(10);
     ui->setupUi(this);
-  //  QPushButton *button = new QPushButton("&Download", this);
-    QPushButton *compteur = new QPushButton(QString::number(speed), this);
+    //  QPushButton *button = new QPushButton("&Download", this);
     ui->vitesseQprogressBar->setRange(0,22);
     ui->vitesseQprogressBar->setValue(0);
 
-    /*unBackground= new QLabel(this);
-    unPixBackground = new QPixmap("C:/aiguillie.png");
-    unBackground->setPixmap(*unPixBackground);r
-    unBackground->setGeometry(100,100,100,100);*/
+    speedMeter= new QLabel(this);
+    speedMeterBackground = new QPixmap(":/DashBordSpeed/rsc/speedMeterBackground.png");
+    speedMeter->setPixmap(*speedMeterBackground);
+    speedMeter->setGeometry(250,420,370,173);
 
-    QImage test;
-    test.load(":/DashBordSpeed/rsc/auguilleTourner.png");
-
-    //QTransform transform;
-    //transform.rotate(0); // Changer cet angle selon vos besoins
-
-    //QImage testRotated = test.transformed(transform); // Appliquer la transformation
-
-    //ui->label->setPixmap(QPixmap::fromImage(testRotated));
-    ui->label->setPixmap(QPixmap::fromImage(test));
-    ui->label->setGeometry(200, 200, 2000, 2000);
-
-
-
-/*
-    QPixmap test3(":/DashBordSpeed/auguilleTourner.png");
-    ui->label->setPixmap(test3);
-    */
-
-
+    QImage beforeRotateNeedle;
+    beforeRotateNeedle.load(":/DashBordSpeed/rsc/rotateNeedle.png");
+    QTransform rotateNeedle;
+    rotateNeedle.rotate(80);
+    QImage afterRotateNeedle = beforeRotateNeedle.transformed(rotateNeedle);
+    ui->NeedleQlabel->setPixmap(QPixmap::fromImage(afterRotateNeedle));
+    ui->NeedleQlabel->setGeometry(65,275,50,50);
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
 }
-void MainWindow::paintEvent(QPaintEvent* e)
-{
-        QWidget::paintEvent(e); // effectue le comportement standard
-
-        QRectF rectangle(10.0, 200.0, 200.0, 200.0);
-        int startAngle = 0 * 16;
-        int spanAngle = 180 * 16;
-        QPainter painter(this);
-
-        painter.setPen( QPen(Qt::red, 2) ); // personnaliser
-        painter.drawPie(rectangle, startAngle, spanAngle);
-
-
-        // x y
-        QRectF rectangle2(350.0, 200.0, 200.0, 200.0);
-        int startAngle2 = 0 * 16;
-        int spanAngle2 = 180 * 16;
-        QPainter painter2(this);
-
-        painter.setPen( QPen(Qt::blue, 2) ); // personnaliser
-        painter.drawPie(rectangle2, startAngle2, spanAngle2);
-
-
-
-
-
-
-}
-
 void MainWindow::on_closeQPushButton_clicked()
 {
     this->close();
