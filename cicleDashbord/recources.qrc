@@ -4,5 +4,9 @@
         <file>rsc/background.png</file>
         <file>rsc/needle.png</file>
         <file>rsc/rotateNeedle.png</file>
+        <file>rsc/wind.png</file>
+        <file>rsc/EmptyBattery.png</file>
+        <file>rsc/fullBattery.png</file>
+        <file>rsc/SpeedometerBackground2.png</file>
     </qresource>
 </RCC>
