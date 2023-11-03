@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1920</width>
-    <height>1080</height>
+    <width>1600</width>
+    <height>1166</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -21,7 +21,7 @@
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>0</y>
+      <y>70</y>
       <width>83</width>
       <height>29</height>
      </rect>
@@ -85,23 +85,7 @@
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QLabel" name="labelNBTour">
-    <property name="geometry">
-     <rect>
-      <x>780</x>
-      <y>430</y>
-      <width>361</width>
-      <height>291</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="pixmap">
-     <pixmap>:/DashBordSpeed/Group 16.png</pixmap>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label">
+   <widget class="QLabel" name="NeedleQlabel">
     <property name="geometry">
      <rect>
       <x>130</x>
@@ -114,13 +98,13 @@
      <string>TextLabel</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_2">
+   <widget class="QLabel" name="QlabelBackGround">
     <property name="geometry">
      <rect>
-      <x>660</x>
-      <y>310</y>
-      <width>1751</width>
-      <height>931</height>
+      <x>-10</x>
+      <y>0</y>
+      <width>1611</width>
+      <height>1151</height>
      </rect>
     </property>
     <property name="text">
@@ -130,21 +114,293 @@
      <pixmap resource="recources.qrc">:/DashBordSpeed/rsc/background.png</pixmap>
     </property>
    </widget>
-   <zorder>label_2</zorder>
-   <zorder>labelNBTour</zorder>
+   <widget class="QLabel" name="hourCompteurQLabel">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>300</y>
+      <width>101</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Zero Hour</family>
+      <pointsize>20</pointsize>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color : #B8FF01</string>
+    </property>
+    <property name="text">
+     <string>12:20</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="timeSystemQlabel">
+    <property name="geometry">
+     <rect>
+      <x>310</x>
+      <y>302</y>
+      <width>41</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>20</pointsize>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color : #B8FF01</string>
+    </property>
+    <property name="text">
+     <string>PM</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="wethearReportQlabel">
+    <property name="geometry">
+     <rect>
+      <x>1290</x>
+      <y>300</y>
+      <width>141</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>20</pointsize>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color : #B8FF01</string>
+    </property>
+    <property name="text">
+     <string>| CLOUDY</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="degresQlabel">
+    <property name="geometry">
+     <rect>
+      <x>1230</x>
+      <y>300</y>
+      <width>81</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>20</pointsize>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color : #B8FF01</string>
+    </property>
+    <property name="text">
+     <string>20 C</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="windImageQlabel">
+    <property name="geometry">
+     <rect>
+      <x>1230</x>
+      <y>330</y>
+      <width>41</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>20</pointsize>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color : #B8FF01</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="recources.qrc">:/DashBordSpeed/rsc/wind.png</pixmap>
+    </property>
+   </widget>
+   <widget class="QLabel" name="windCounterQlabel">
+    <property name="geometry">
+     <rect>
+      <x>1260</x>
+      <y>330</y>
+      <width>111</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color : white</string>
+    </property>
+    <property name="text">
+     <string>15-20 MPH </string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="batteryLabel">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>678</y>
+      <width>141</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Zero Hour</family>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color : white</string>
+    </property>
+    <property name="text">
+     <string>BATTERY</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="batteryStatusLabel">
+    <property name="geometry">
+     <rect>
+      <x>490</x>
+      <y>678</y>
+      <width>71</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Zero Hour</family>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color : white</string>
+    </property>
+    <property name="text">
+     <string>60 %</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>690</y>
+      <width>49</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="recources.qrc">:/DashBordSpeed/rsc/fullBattery.png</pixmap>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>690</y>
+      <width>49</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="recources.qrc">:/DashBordSpeed/rsc/fullBattery.png</pixmap>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>440</x>
+      <y>690</y>
+      <width>49</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="recources.qrc">:/DashBordSpeed/rsc/EmptyBattery.png</pixmap>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>690</y>
+      <width>49</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="recources.qrc">:/DashBordSpeed/rsc/fullBattery.png</pixmap>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>1040</x>
+      <y>410</y>
+      <width>371</width>
+      <height>201</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="recources.qrc">:/DashBordSpeed/rsc/SpeedometerBackground2.png</pixmap>
+    </property>
+   </widget>
+   <zorder>QlabelBackGround</zorder>
    <zorder>addQpushButton</zorder>
    <zorder>compteurQlineEdit</zorder>
    <zorder>vitesseQprogressBar</zorder>
    <zorder>closeQPushButton</zorder>
-   <zorder>label</zorder>
+   <zorder>NeedleQlabel</zorder>
    <zorder>lessQpushButton</zorder>
+   <zorder>hourCompteurQLabel</zorder>
+   <zorder>timeSystemQlabel</zorder>
+   <zorder>wethearReportQlabel</zorder>
+   <zorder>degresQlabel</zorder>
+   <zorder>windImageQlabel</zorder>
+   <zorder>windCounterQlabel</zorder>
+   <zorder>batteryLabel</zorder>
+   <zorder>batteryStatusLabel</zorder>
+   <zorder>label</zorder>
+   <zorder>label_2</zorder>
+   <zorder>label_3</zorder>
+   <zorder>label_4</zorder>
+   <zorder>label_5</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1920</width>
+     <width>1600</width>
      <height>21</height>
     </rect>
    </property>
