@@ -7,6 +7,7 @@
 #include <QLabel>
 #include <QPixmap>
 #include <QTransform>
+#include <QDateTime>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }

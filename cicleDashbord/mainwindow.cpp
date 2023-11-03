@@ -24,6 +24,10 @@ MainWindow::MainWindow(QWidget *parent)
     QImage afterRotateNeedle = beforeRotateNeedle.transformed(rotateNeedle);
     ui->NeedleQlabel->setPixmap(QPixmap::fromImage(afterRotateNeedle));
     ui->NeedleQlabel->setGeometry(65,275,50,50);
+
+
+    QDateTime heureLocale = QDateTime::currentDateTime();
+    ui->hourCompteurQLabel->setText(heureLocale.toString("hh:mm"));//verife pm/am non integre
 }
 
 MainWindow::~MainWindow()

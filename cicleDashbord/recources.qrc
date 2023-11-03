@@ -8,5 +8,11 @@
         <file>rsc/EmptyBattery.png</file>
         <file>rsc/fullBattery.png</file>
         <file>rsc/SpeedometerBackground2.png</file>
+        <file>rsc/cross.png</file>
+        <file>rsc/home.png</file>
+        <file>rsc/music.png</file>
+        <file>rsc/phone.png</file>
+        <file>rsc/setting.png</file>
+        <file>rsc/Vector.png</file>
     </qresource>
 </RCC>
