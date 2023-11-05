@@ -9,6 +9,9 @@
 #include <QTransform>
 #include <QDateTime>
 
+#include <QChar>
+#include <QDebug>
+
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
@@ -30,6 +33,8 @@ public:
     QImage *beforeRotateNeedle;
     QTransform *rotateNeedle;
     QImage *afterRotateNeedle;
+    QDate *dateCourante;
+    void displayCurrentDate();
 
 private slots:
     void on_closeQPushButton_clicked();

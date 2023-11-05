@@ -72,14 +72,28 @@
    <widget class="QLineEdit" name="compteurQlineEdit">
     <property name="geometry">
      <rect>
-      <x>520</x>
-      <y>10</y>
-      <width>113</width>
-      <height>28</height>
+      <x>1140</x>
+      <y>520</y>
+      <width>151</width>
+      <height>81</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <family>Zero Hour</family>
+      <pointsize>40</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background: transparent;
+border: transparent;
+color: white;</string>
+    </property>
     <property name="text">
-     <string/>
+     <string>120</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
     </property>
     <property name="readOnly">
      <bool>true</bool>
@@ -509,6 +523,27 @@ border: transparent;</string>
      </size>
     </property>
    </widget>
+   <widget class="QLabel" name="displayDateQlabel">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>350</y>
+      <width>171</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color : white;</string>
+    </property>
+    <property name="text">
+     <string>12 MARCH</string>
+    </property>
+   </widget>
    <zorder>QlabelBackGround</zorder>
    <zorder>addQpushButton</zorder>
    <zorder>compteurQlineEdit</zorder>
@@ -534,6 +569,7 @@ border: transparent;</string>
    <zorder>musicQpushButton</zorder>
    <zorder>phoneQpushButton</zorder>
    <zorder>settingQpushButton</zorder>
+   <zorder>displayDateQlabel</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
