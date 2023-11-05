@@ -9,7 +9,7 @@ MainWindow::MainWindow(QWidget *parent)
     this->setSpeed(10);
     ui->setupUi(this);
     //  QPushButton *button = new QPushButton("&Download", this);
-    ui->vitesseQprogressBar->setRange(0,22);
+    ui->vitesseQprogressBar->setRange(0,220);
     ui->vitesseQprogressBar->setValue(0);
 
     speedMeter= new QLabel(this);
@@ -24,6 +24,16 @@ MainWindow::MainWindow(QWidget *parent)
     QImage afterRotateNeedle = beforeRotateNeedle.transformed(rotateNeedle);
     ui->NeedleQlabel->setPixmap(QPixmap::fromImage(afterRotateNeedle));
     ui->NeedleQlabel->setGeometry(65,275,50,50);
+
+
+    QDateTime heureLocale = QDateTime::currentDateTime();
+    ui->hourCompteurQLabel->setText(heureLocale.toString("hh:mm"));//verife pm/am non integre
+
+    /*QDate dateCourante = QDate::currentDate();
+
+       // Afficher le mois courant
+       qDebug() << "Le mois courant est : " << dateCourante.month();*/
+    displayCurrentDate();
 }
 
 MainWindow::~MainWindow()
@@ -56,4 +66,38 @@ void MainWindow::setSpeed(int enterSpeed)
 {
     this->speed=enterSpeed;
 }
-
+void MainWindow::displayCurrentDate()
+{
+    QDate dateCourante = QDate::currentDate();
+    QString month = "";
+    switch (dateCourante.month()) {
+    case 1: month = "JANUARY";
+        break;
+    case 2: month = "FEBRUARY";
+        break;
+    case 3: month = "MARCH";
+        break;
+    case 4: month = "APRIL";
+        break;
+    case 5: month = "MAY";
+        break;
+    case 6: month = "JUNE";
+        break;
+    case 7: month = "JULY";
+        break;
+    case 8: month = "AUGUST";
+        break;
+    case 9: month = "SEPTEMBER";
+        break;
+    case 10: month = "OCTOBER";
+        break;
+    case 11: month = "NOVEMBER";
+        break;
+    case 12: month = "DECEMBER";
+        break;
+    default: month = "";
+        break;
+    }
+    QString dayString = QString::number(dateCourante.day());
+    ui->displayDateQlabel->setText(dayString + " " + month);
+}
