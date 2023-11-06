@@ -25,14 +25,6 @@ MainWindow::MainWindow(QWidget *parent)
     ui->NeedleQlabel->setPixmap(QPixmap::fromImage(afterRotateNeedle));
     ui->NeedleQlabel->setGeometry(65,275,50,50);
 
-
-    QDateTime heureLocale = QDateTime::currentDateTime();
-    ui->hourCompteurQLabel->setText(heureLocale.toString("hh:mm"));//verife pm/am non integre
-
-    /*QDate dateCourante = QDate::currentDate();
-
-       // Afficher le mois courant
-       qDebug() << "Le mois courant est : " << dateCourante.month();*/
     displayCurrentDate();
 }
 
@@ -68,9 +60,16 @@ void MainWindow::setSpeed(int enterSpeed)
 }
 void MainWindow::displayCurrentDate()
 {
-    QDate dateCourante = QDate::currentDate();
+    QDateTime localHour = QDateTime::currentDateTime();
+
+    QTime currentHour = QTime::currentTime();
+    int hour = currentHour.hour();
+    QString isPm = (hour > 12) ? "PM" : "AM";
+    ui->hourCounterQLabel->setText(localHour.toString("hh:mm") +" "+ isPm);
+
+    QDate _CurrentDate = QDate::currentDate();
     QString month = "";
-    switch (dateCourante.month()) {
+    switch (_CurrentDate.month()) {
     case 1: month = "JANUARY";
         break;
     case 2: month = "FEBRUARY";
@@ -98,6 +97,6 @@ void MainWindow::displayCurrentDate()
     default: month = "";
         break;
     }
-    QString dayString = QString::number(dateCourante.day());
+    QString dayString = QString::number(_CurrentDate.day());
     ui->displayDateQlabel->setText(dayString + " " + month);
 }

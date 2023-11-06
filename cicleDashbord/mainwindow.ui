@@ -128,19 +128,19 @@ color: white;</string>
      <pixmap resource="recources.qrc">:/DashBordSpeed/rsc/background.png</pixmap>
     </property>
    </widget>
-   <widget class="QLabel" name="hourCompteurQLabel">
+   <widget class="QLabel" name="hourCounterQLabel">
     <property name="geometry">
      <rect>
       <x>210</x>
       <y>300</y>
-      <width>101</width>
+      <width>131</width>
       <height>51</height>
      </rect>
     </property>
     <property name="font">
      <font>
       <family>Zero Hour</family>
-      <pointsize>20</pointsize>
+      <pointsize>18</pointsize>
       <bold>false</bold>
      </font>
     </property>
@@ -149,28 +149,6 @@ color: white;</string>
     </property>
     <property name="text">
      <string>12:20</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="timeSystemQlabel">
-    <property name="geometry">
-     <rect>
-      <x>310</x>
-      <y>302</y>
-      <width>41</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>20</pointsize>
-      <bold>false</bold>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color : #B8FF01</string>
-    </property>
-    <property name="text">
-     <string>PM</string>
     </property>
    </widget>
    <widget class="QLabel" name="wethearReportQlabel">
@@ -551,8 +529,7 @@ border: transparent;</string>
    <zorder>closeQPushButton</zorder>
    <zorder>NeedleQlabel</zorder>
    <zorder>lessQpushButton</zorder>
-   <zorder>hourCompteurQLabel</zorder>
-   <zorder>timeSystemQlabel</zorder>
+   <zorder>hourCounterQLabel</zorder>
    <zorder>wethearReportQlabel</zorder>
    <zorder>degresQlabel</zorder>
    <zorder>windImageQlabel</zorder>
