@@ -128,19 +128,19 @@ color: white;</string>
      <pixmap resource="recources.qrc">:/DashBordSpeed/rsc/background.png</pixmap>
     </property>
    </widget>
-   <widget class="QLabel" name="hourCompteurQLabel">
+   <widget class="QLabel" name="hourCounterQLabel">
     <property name="geometry">
      <rect>
       <x>210</x>
       <y>300</y>
-      <width>101</width>
+      <width>161</width>
       <height>51</height>
      </rect>
     </property>
     <property name="font">
      <font>
       <family>Zero Hour</family>
-      <pointsize>20</pointsize>
+      <pointsize>18</pointsize>
       <bold>false</bold>
      </font>
     </property>
@@ -149,28 +149,6 @@ color: white;</string>
     </property>
     <property name="text">
      <string>12:20</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="timeSystemQlabel">
-    <property name="geometry">
-     <rect>
-      <x>310</x>
-      <y>302</y>
-      <width>41</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>20</pointsize>
-      <bold>false</bold>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color : #B8FF01</string>
-    </property>
-    <property name="text">
-     <string>PM</string>
     </property>
    </widget>
    <widget class="QLabel" name="wethearReportQlabel">
@@ -262,114 +240,6 @@ color: white;</string>
     </property>
     <property name="text">
      <string>15-20 MPH </string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="batteryLabel">
-    <property name="geometry">
-     <rect>
-      <x>140</x>
-      <y>678</y>
-      <width>141</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Zero Hour</family>
-      <pointsize>15</pointsize>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color : white</string>
-    </property>
-    <property name="text">
-     <string>BATTERY</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="batteryStatusLabel">
-    <property name="geometry">
-     <rect>
-      <x>490</x>
-      <y>678</y>
-      <width>71</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Zero Hour</family>
-      <pointsize>15</pointsize>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color : white</string>
-    </property>
-    <property name="text">
-     <string>60 %</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="labebatteryCapacityQlabel1">
-    <property name="geometry">
-     <rect>
-      <x>290</x>
-      <y>690</y>
-      <width>49</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="pixmap">
-     <pixmap resource="recources.qrc">:/DashBordSpeed/rsc/fullBattery.png</pixmap>
-    </property>
-   </widget>
-   <widget class="QLabel" name="labebatteryCapacityQlabel3">
-    <property name="geometry">
-     <rect>
-      <x>390</x>
-      <y>690</y>
-      <width>49</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="pixmap">
-     <pixmap resource="recources.qrc">:/DashBordSpeed/rsc/fullBattery.png</pixmap>
-    </property>
-   </widget>
-   <widget class="QLabel" name="labebatteryCapacityQlabel4">
-    <property name="geometry">
-     <rect>
-      <x>440</x>
-      <y>690</y>
-      <width>49</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="pixmap">
-     <pixmap resource="recources.qrc">:/DashBordSpeed/rsc/EmptyBattery.png</pixmap>
-    </property>
-   </widget>
-   <widget class="QLabel" name="labebatteryCapacityQlabel2">
-    <property name="geometry">
-     <rect>
-      <x>340</x>
-      <y>690</y>
-      <width>49</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="pixmap">
-     <pixmap resource="recources.qrc">:/DashBordSpeed/rsc/fullBattery.png</pixmap>
     </property>
    </widget>
    <widget class="QLabel" name="speedMeterQlabel">
@@ -544,6 +414,616 @@ border: transparent;</string>
      <string>12 MARCH</string>
     </property>
    </widget>
+   <widget class="QGroupBox" name="EnergyComsuptionQgroupBox">
+    <property name="geometry">
+     <rect>
+      <x>1070</x>
+      <y>650</y>
+      <width>311</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border :transparant;</string>
+    </property>
+    <property name="title">
+     <string/>
+    </property>
+    <widget class="QLabel" name="ComsuptionQlabel">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>311</width>
+       <height>171</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap resource="recources.qrc">:/DashBordSpeed/rsc/energyConsumption.png</pixmap>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_3">
+     <property name="geometry">
+      <rect>
+       <x>110</x>
+       <y>110</y>
+       <width>61</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color :white</string>
+     </property>
+     <property name="text">
+      <string>188 wh/km 
+Average</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_4">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>110</y>
+       <width>71</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color :white</string>
+     </property>
+     <property name="text">
+      <string>27.5 kwh
+FullCapacity</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>110</y>
+       <width>61</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color :white</string>
+     </property>
+     <property name="text">
+      <string>150 km 
+Remaining</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>30</y>
+       <width>281</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Zero Hour</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color : white</string>
+     </property>
+     <property name="text">
+      <string>ENERGY COMSUPTION</string>
+     </property>
+    </widget>
+    <widget class="QGroupBox" name="EnergyComsuptionStatusQgroupBox">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>50</y>
+       <width>241</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string/>
+     </property>
+     <widget class="QLabel" name="energyComsuptionQlabel">
+      <property name="geometry">
+       <rect>
+        <x>8</x>
+        <y>20</y>
+        <width>5</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="recources.qrc">:/DashBordSpeed/rsc/Line.png</pixmap>
+      </property>
+     </widget>
+     <widget class="QLabel" name="energyComsuptionQlabel_23">
+      <property name="geometry">
+       <rect>
+        <x>228</x>
+        <y>20</y>
+        <width>5</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="recources.qrc">:/DashBordSpeed/rsc/emptyLine.png</pixmap>
+      </property>
+     </widget>
+     <widget class="QLabel" name="energyComsuptionQlabel_20">
+      <property name="geometry">
+       <rect>
+        <x>198</x>
+        <y>20</y>
+        <width>5</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="recources.qrc">:/DashBordSpeed/rsc/emptyLine.png</pixmap>
+      </property>
+     </widget>
+     <widget class="QLabel" name="energyComsuptionQlabel_6">
+      <property name="geometry">
+       <rect>
+        <x>58</x>
+        <y>20</y>
+        <width>5</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="recources.qrc">:/DashBordSpeed/rsc/Line.png</pixmap>
+      </property>
+     </widget>
+     <widget class="QLabel" name="energyComsuptionQlabel_11">
+      <property name="geometry">
+       <rect>
+        <x>108</x>
+        <y>20</y>
+        <width>5</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="recources.qrc">:/DashBordSpeed/rsc/Line.png</pixmap>
+      </property>
+     </widget>
+     <widget class="QLabel" name="energyComsuptionQlabel_14">
+      <property name="geometry">
+       <rect>
+        <x>138</x>
+        <y>20</y>
+        <width>5</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="recources.qrc">:/DashBordSpeed/rsc/Line.png</pixmap>
+      </property>
+     </widget>
+     <widget class="QLabel" name="energyComsuptionQlabel_8">
+      <property name="geometry">
+       <rect>
+        <x>78</x>
+        <y>20</y>
+        <width>5</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="recources.qrc">:/DashBordSpeed/rsc/Line.png</pixmap>
+      </property>
+     </widget>
+     <widget class="QLabel" name="energyComsuptionQlabel_18">
+      <property name="geometry">
+       <rect>
+        <x>178</x>
+        <y>20</y>
+        <width>5</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="recources.qrc">:/DashBordSpeed/rsc/emptyLine.png</pixmap>
+      </property>
+     </widget>
+     <widget class="QLabel" name="energyComsuptionQlabel_13">
+      <property name="geometry">
+       <rect>
+        <x>128</x>
+        <y>20</y>
+        <width>5</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="recources.qrc">:/DashBordSpeed/rsc/Line.png</pixmap>
+      </property>
+     </widget>
+     <widget class="QLabel" name="energyComsuptionQlabel_21">
+      <property name="geometry">
+       <rect>
+        <x>208</x>
+        <y>20</y>
+        <width>5</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="recources.qrc">:/DashBordSpeed/rsc/emptyLine.png</pixmap>
+      </property>
+     </widget>
+     <widget class="QLabel" name="energyComsuptionQlabel_2">
+      <property name="geometry">
+       <rect>
+        <x>18</x>
+        <y>20</y>
+        <width>5</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="recources.qrc">:/DashBordSpeed/rsc/Line.png</pixmap>
+      </property>
+     </widget>
+     <widget class="QLabel" name="energyComsuptionQlabel_9">
+      <property name="geometry">
+       <rect>
+        <x>88</x>
+        <y>20</y>
+        <width>5</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="recources.qrc">:/DashBordSpeed/rsc/Line.png</pixmap>
+      </property>
+     </widget>
+     <widget class="QLabel" name="energyComsuptionQlabel_19">
+      <property name="geometry">
+       <rect>
+        <x>188</x>
+        <y>20</y>
+        <width>5</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="recources.qrc">:/DashBordSpeed/rsc/emptyLine.png</pixmap>
+      </property>
+     </widget>
+     <widget class="QLabel" name="energyComsuptionQlabel_7">
+      <property name="geometry">
+       <rect>
+        <x>68</x>
+        <y>20</y>
+        <width>5</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="recources.qrc">:/DashBordSpeed/rsc/Line.png</pixmap>
+      </property>
+     </widget>
+     <widget class="QLabel" name="energyComsuptionQlabel_3">
+      <property name="geometry">
+       <rect>
+        <x>28</x>
+        <y>20</y>
+        <width>5</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="recources.qrc">:/DashBordSpeed/rsc/Line.png</pixmap>
+      </property>
+     </widget>
+     <widget class="QLabel" name="energyComsuptionQlabel_22">
+      <property name="geometry">
+       <rect>
+        <x>218</x>
+        <y>20</y>
+        <width>5</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="recources.qrc">:/DashBordSpeed/rsc/emptyLine.png</pixmap>
+      </property>
+     </widget>
+     <widget class="QLabel" name="energyComsuptionQlabel_16">
+      <property name="geometry">
+       <rect>
+        <x>158</x>
+        <y>20</y>
+        <width>5</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="recources.qrc">:/DashBordSpeed/rsc/emptyLine.png</pixmap>
+      </property>
+     </widget>
+     <widget class="QLabel" name="energyComsuptionQlabel_5">
+      <property name="geometry">
+       <rect>
+        <x>48</x>
+        <y>20</y>
+        <width>5</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="recources.qrc">:/DashBordSpeed/rsc/Line.png</pixmap>
+      </property>
+     </widget>
+     <widget class="QLabel" name="energyComsuptionQlabel_15">
+      <property name="geometry">
+       <rect>
+        <x>148</x>
+        <y>20</y>
+        <width>5</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="recources.qrc">:/DashBordSpeed/rsc/Line.png</pixmap>
+      </property>
+     </widget>
+     <widget class="QLabel" name="energyComsuptionQlabel_4">
+      <property name="geometry">
+       <rect>
+        <x>38</x>
+        <y>20</y>
+        <width>5</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="recources.qrc">:/DashBordSpeed/rsc/Line.png</pixmap>
+      </property>
+     </widget>
+     <widget class="QLabel" name="energyComsuptionQlabel_17">
+      <property name="geometry">
+       <rect>
+        <x>168</x>
+        <y>20</y>
+        <width>5</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="recources.qrc">:/DashBordSpeed/rsc/emptyLine.png</pixmap>
+      </property>
+     </widget>
+     <widget class="QLabel" name="energyComsuptionQlabel_12">
+      <property name="geometry">
+       <rect>
+        <x>118</x>
+        <y>20</y>
+        <width>5</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="recources.qrc">:/DashBordSpeed/rsc/Line.png</pixmap>
+      </property>
+     </widget>
+     <widget class="QLabel" name="energyComsuptionQlabel_10">
+      <property name="geometry">
+       <rect>
+        <x>98</x>
+        <y>20</y>
+        <width>5</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="recources.qrc">:/DashBordSpeed/rsc/Line.png</pixmap>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>650</y>
+      <width>451</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border :transparant</string>
+    </property>
+    <property name="title">
+     <string/>
+    </property>
+    <widget class="QLabel" name="batteryStatusLabel">
+     <property name="geometry">
+      <rect>
+       <x>360</x>
+       <y>10</y>
+       <width>71</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Zero Hour</family>
+       <pointsize>15</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color : white</string>
+     </property>
+     <property name="text">
+      <string>60 %</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labebatteryCapacityQlabel4">
+     <property name="geometry">
+      <rect>
+       <x>310</x>
+       <y>22</y>
+       <width>49</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap resource="recources.qrc">:/DashBordSpeed/rsc/EmptyBattery.png</pixmap>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labebatteryCapacityQlabel3">
+     <property name="geometry">
+      <rect>
+       <x>260</x>
+       <y>22</y>
+       <width>49</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap resource="recources.qrc">:/DashBordSpeed/rsc/fullBattery.png</pixmap>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labebatteryCapacityQlabel2">
+     <property name="geometry">
+      <rect>
+       <x>210</x>
+       <y>22</y>
+       <width>49</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap resource="recources.qrc">:/DashBordSpeed/rsc/fullBattery.png</pixmap>
+     </property>
+    </widget>
+    <widget class="QLabel" name="batteryLabel">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>141</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Zero Hour</family>
+       <pointsize>15</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color : white</string>
+     </property>
+     <property name="text">
+      <string>BATTERY</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labebatteryCapacityQlabel1">
+     <property name="geometry">
+      <rect>
+       <x>160</x>
+       <y>22</y>
+       <width>49</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap resource="recources.qrc">:/DashBordSpeed/rsc/fullBattery.png</pixmap>
+     </property>
+    </widget>
+   </widget>
    <zorder>QlabelBackGround</zorder>
    <zorder>addQpushButton</zorder>
    <zorder>compteurQlineEdit</zorder>
@@ -551,18 +1031,11 @@ border: transparent;</string>
    <zorder>closeQPushButton</zorder>
    <zorder>NeedleQlabel</zorder>
    <zorder>lessQpushButton</zorder>
-   <zorder>hourCompteurQLabel</zorder>
-   <zorder>timeSystemQlabel</zorder>
+   <zorder>hourCounterQLabel</zorder>
    <zorder>wethearReportQlabel</zorder>
    <zorder>degresQlabel</zorder>
    <zorder>windImageQlabel</zorder>
    <zorder>windCounterQlabel</zorder>
-   <zorder>batteryLabel</zorder>
-   <zorder>batteryStatusLabel</zorder>
-   <zorder>labebatteryCapacityQlabel1</zorder>
-   <zorder>labebatteryCapacityQlabel3</zorder>
-   <zorder>labebatteryCapacityQlabel4</zorder>
-   <zorder>labebatteryCapacityQlabel2</zorder>
    <zorder>speedMeterQlabel</zorder>
    <zorder>homeQpushButton</zorder>
    <zorder>menuQpushButton</zorder>
@@ -570,6 +1043,8 @@ border: transparent;</string>
    <zorder>phoneQpushButton</zorder>
    <zorder>settingQpushButton</zorder>
    <zorder>displayDateQlabel</zorder>
+   <zorder>EnergyComsuptionQgroupBox</zorder>
+   <zorder>groupBox</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
