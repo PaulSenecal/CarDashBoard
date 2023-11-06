@@ -13,6 +13,8 @@
         <file>rsc/music.png</file>
         <file>rsc/phone.png</file>
         <file>rsc/setting.png</file>
-        <file>rsc/Vector.png</file>
+        <file>rsc/energyConsumption.png</file>
+        <file>rsc/Line.png</file>
+        <file>rsc/emptyLine.png</file>
     </qresource>
 </RCC>

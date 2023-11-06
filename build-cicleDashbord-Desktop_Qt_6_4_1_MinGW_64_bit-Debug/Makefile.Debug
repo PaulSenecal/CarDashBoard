@@ -107,14 +107,16 @@ debug/qrc_recources.cpp: ../cicleDashbord/recources.qrc \
 		../cicleDashbord/rsc/cross.png \
 		../cicleDashbord/rsc/music.png \
 		../cicleDashbord/rsc/speedMeterBackground.png \
+		../cicleDashbord/rsc/energyConsumption.png \
 		../cicleDashbord/rsc/background.png \
 		../cicleDashbord/rsc/wind.png \
+		../cicleDashbord/rsc/Line.png \
 		../cicleDashbord/rsc/needle.png \
 		../cicleDashbord/rsc/rotateNeedle.png \
-		../cicleDashbord/rsc/Vector.png \
 		../cicleDashbord/rsc/SpeedometerBackground2.png \
 		../cicleDashbord/rsc/fullBattery.png \
 		../cicleDashbord/rsc/phone.png \
+		../cicleDashbord/rsc/emptyLine.png \
 		../cicleDashbord/rsc/EmptyBattery.png \
 		../cicleDashbord/rsc/setting.png \
 		../cicleDashbord/rsc/home.png
@@ -280,6 +282,12 @@ debug/moc_mainwindow.cpp: ../cicleDashbord/mainwindow.h \
 		C:/DOWNLOAD/ProgrammingTool/QT/6.4.1/mingw_64/include/QtGui/qpicture.h \
 		C:/DOWNLOAD/ProgrammingTool/QT/6.4.1/mingw_64/include/QtGui/qtextdocument.h \
 		C:/DOWNLOAD/ProgrammingTool/QT/6.4.1/mingw_64/include/QtGui/QPixmap \
+		C:/DOWNLOAD/ProgrammingTool/QT/6.4.1/mingw_64/include/QtCore/QDateTime \
+		C:/DOWNLOAD/ProgrammingTool/QT/6.4.1/mingw_64/include/QtCore/qdatetime.h \
+		C:/DOWNLOAD/ProgrammingTool/QT/6.4.1/mingw_64/include/QtCore/qcalendar.h \
+		C:/DOWNLOAD/ProgrammingTool/QT/6.4.1/mingw_64/include/QtCore/qlocale.h \
+		C:/DOWNLOAD/ProgrammingTool/QT/6.4.1/mingw_64/include/QtCore/QChar \
+		C:/DOWNLOAD/ProgrammingTool/QT/6.4.1/mingw_64/include/QtCore/QDebug \
 		debug/moc_predefs.h \
 		C:/DOWNLOAD/ProgrammingTool/QT/6.4.1/mingw_64/bin/moc.exe
 	C:\DOWNLOAD\ProgrammingTool\QT\6.4.1\mingw_64\bin\moc.exe $(DEFINES) --include C:/Users/senec/Desktop/CarDashBoard/build-cicleDashbord-Desktop_Qt_6_4_1_MinGW_64_bit-Debug/debug/moc_predefs.h -IC:/DOWNLOAD/ProgrammingTool/QT/6.4.1/mingw_64/mkspecs/win32-g++ -IC:/Users/senec/Desktop/CarDashBoard/cicleDashbord -IC:/DOWNLOAD/ProgrammingTool/QT/6.4.1/mingw_64/include -IC:/DOWNLOAD/ProgrammingTool/QT/6.4.1/mingw_64/include/QtWidgets -IC:/DOWNLOAD/ProgrammingTool/QT/6.4.1/mingw_64/include/QtGui -IC:/DOWNLOAD/ProgrammingTool/QT/6.4.1/mingw_64/include/QtCore -I. -IC:/DOWNLOAD/ProgrammingTool/QT/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++ -IC:/DOWNLOAD/ProgrammingTool/QT/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32 -IC:/DOWNLOAD/ProgrammingTool/QT/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward -IC:/DOWNLOAD/ProgrammingTool/QT/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include -IC:/DOWNLOAD/ProgrammingTool/QT/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed -IC:/DOWNLOAD/ProgrammingTool/QT/Tools/mingw1120_64/x86_64-w64-mingw32/include ..\cicleDashbord\mainwindow.h -o debug\moc_mainwindow.cpp
@@ -458,6 +466,12 @@ debug/main.o: ../cicleDashbord/main.cpp ../cicleDashbord/mainwindow.h \
 		C:/DOWNLOAD/ProgrammingTool/QT/6.4.1/mingw_64/include/QtGui/qpicture.h \
 		C:/DOWNLOAD/ProgrammingTool/QT/6.4.1/mingw_64/include/QtGui/qtextdocument.h \
 		C:/DOWNLOAD/ProgrammingTool/QT/6.4.1/mingw_64/include/QtGui/QPixmap \
+		C:/DOWNLOAD/ProgrammingTool/QT/6.4.1/mingw_64/include/QtCore/QDateTime \
+		C:/DOWNLOAD/ProgrammingTool/QT/6.4.1/mingw_64/include/QtCore/qdatetime.h \
+		C:/DOWNLOAD/ProgrammingTool/QT/6.4.1/mingw_64/include/QtCore/qcalendar.h \
+		C:/DOWNLOAD/ProgrammingTool/QT/6.4.1/mingw_64/include/QtCore/qlocale.h \
+		C:/DOWNLOAD/ProgrammingTool/QT/6.4.1/mingw_64/include/QtCore/QChar \
+		C:/DOWNLOAD/ProgrammingTool/QT/6.4.1/mingw_64/include/QtCore/QDebug \
 		C:/DOWNLOAD/ProgrammingTool/QT/6.4.1/mingw_64/include/QtWidgets/QGraphicsScene \
 		C:/DOWNLOAD/ProgrammingTool/QT/6.4.1/mingw_64/include/QtWidgets/qgraphicsscene.h \
 		C:/DOWNLOAD/ProgrammingTool/QT/6.4.1/mingw_64/include/QtWidgets/QApplication \
@@ -481,7 +495,6 @@ debug/main.o: ../cicleDashbord/main.cpp ../cicleDashbord/mainwindow.h \
 		C:/DOWNLOAD/ProgrammingTool/QT/6.4.1/mingw_64/include/QtCore/qpromise.h \
 		C:/DOWNLOAD/ProgrammingTool/QT/6.4.1/mingw_64/include/QtGui/qguiapplication.h \
 		C:/DOWNLOAD/ProgrammingTool/QT/6.4.1/mingw_64/include/QtGui/qinputmethod.h \
-		C:/DOWNLOAD/ProgrammingTool/QT/6.4.1/mingw_64/include/QtCore/qlocale.h \
 		C:/DOWNLOAD/ProgrammingTool/QT/6.4.1/mingw_64/include/QtGui/qguiapplication_platform.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\main.o ..\cicleDashbord\main.cpp
 
@@ -636,8 +649,15 @@ debug/mainwindow.o: ../cicleDashbord/mainwindow.cpp ../cicleDashbord/mainwindow.
 		C:/DOWNLOAD/ProgrammingTool/QT/6.4.1/mingw_64/include/QtGui/qpicture.h \
 		C:/DOWNLOAD/ProgrammingTool/QT/6.4.1/mingw_64/include/QtGui/qtextdocument.h \
 		C:/DOWNLOAD/ProgrammingTool/QT/6.4.1/mingw_64/include/QtGui/QPixmap \
+		C:/DOWNLOAD/ProgrammingTool/QT/6.4.1/mingw_64/include/QtCore/QDateTime \
+		C:/DOWNLOAD/ProgrammingTool/QT/6.4.1/mingw_64/include/QtCore/qdatetime.h \
+		C:/DOWNLOAD/ProgrammingTool/QT/6.4.1/mingw_64/include/QtCore/qcalendar.h \
+		C:/DOWNLOAD/ProgrammingTool/QT/6.4.1/mingw_64/include/QtCore/qlocale.h \
+		C:/DOWNLOAD/ProgrammingTool/QT/6.4.1/mingw_64/include/QtCore/QChar \
+		C:/DOWNLOAD/ProgrammingTool/QT/6.4.1/mingw_64/include/QtCore/QDebug \
 		ui_mainwindow.h \
 		C:/DOWNLOAD/ProgrammingTool/QT/6.4.1/mingw_64/include/QtCore/QVariant \
+		C:/DOWNLOAD/ProgrammingTool/QT/6.4.1/mingw_64/include/QtGui/QIcon \
 		C:/DOWNLOAD/ProgrammingTool/QT/6.4.1/mingw_64/include/QtWidgets/QApplication \
 		C:/DOWNLOAD/ProgrammingTool/QT/6.4.1/mingw_64/include/QtWidgets/qapplication.h \
 		C:/DOWNLOAD/ProgrammingTool/QT/6.4.1/mingw_64/include/QtCore/qcoreapplication.h \
@@ -659,7 +679,6 @@ debug/mainwindow.o: ../cicleDashbord/mainwindow.cpp ../cicleDashbord/mainwindow.
 		C:/DOWNLOAD/ProgrammingTool/QT/6.4.1/mingw_64/include/QtCore/qpromise.h \
 		C:/DOWNLOAD/ProgrammingTool/QT/6.4.1/mingw_64/include/QtGui/qguiapplication.h \
 		C:/DOWNLOAD/ProgrammingTool/QT/6.4.1/mingw_64/include/QtGui/qinputmethod.h \
-		C:/DOWNLOAD/ProgrammingTool/QT/6.4.1/mingw_64/include/QtCore/qlocale.h \
 		C:/DOWNLOAD/ProgrammingTool/QT/6.4.1/mingw_64/include/QtGui/qguiapplication_platform.h \
 		C:/DOWNLOAD/ProgrammingTool/QT/6.4.1/mingw_64/include/QtWidgets/QLineEdit \
 		C:/DOWNLOAD/ProgrammingTool/QT/6.4.1/mingw_64/include/QtWidgets/qlineedit.h \
