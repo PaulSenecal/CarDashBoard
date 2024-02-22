@@ -1,0 +1,12 @@
+release/appdashboard.o
+release/calldashboard.o
+release/main.o
+release/mainwindow.o
+release/musicdashboard.o
+release/settingdashboard.o
+release/qrc_recources.o
+release/moc_appdashboard.o
+release/moc_calldashboard.o
+release/moc_mainwindow.o
+release/moc_musicdashboard.o
+release/moc_settingdashboard.o
