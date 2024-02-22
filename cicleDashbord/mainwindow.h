@@ -9,8 +9,12 @@
 #include <QTransform>
 #include <QDateTime>
 
-#include <QChar>
 #include <QDebug>
+
+#include "setting/settingdashboard.h"
+#include "music/musicdashboard.h"
+#include "call/calldashboard.h"
+#include "app/appdashboard.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -43,8 +47,21 @@ private slots:
 
     void on_addQpushButton_clicked();
 
+    void on_menuQpushButton_clicked();
+
+    void on_musicQpushButton_clicked();
+
+    void on_phoneQpushButton_clicked();
+
+    void on_settingQpushButton_clicked();
+
 private:
     Ui::MainWindow *ui;
     int speed;
+    SettingDashBoard * SettingPage;
+    MusicDashBoard * MusicPage;
+    CallDashBoard * CallPage;
+    AppDashBoard * AppPages;
+
 };
 #endif // MAINWINDOW_H

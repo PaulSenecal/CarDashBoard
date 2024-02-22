@@ -11,14 +11,28 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    app/appdashboard.cpp \
+    call/calldashboard.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    music/musicdashboard.cpp \
+    setting/settingdashboard.cpp
 
 HEADERS += \
-    mainwindow.h
+    app/appdashboard.h \
+    call/calldashboard.h \
+    mainwindow.h \
+    music/musicdashboard.h \
+    setting/settingdashboard.h
+
 
 FORMS += \
-    mainwindow.ui
+    app/appdashboard.ui \
+    call/calldashboard.ui \
+    mainwindow.ui \
+    music/musicdashboard.ui \
+    setting/settingdashboard.ui
+
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

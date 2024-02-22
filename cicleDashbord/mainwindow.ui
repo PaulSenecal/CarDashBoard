@@ -72,9 +72,9 @@
    <widget class="QLineEdit" name="compteurQlineEdit">
     <property name="geometry">
      <rect>
-      <x>1140</x>
+      <x>1180</x>
       <y>520</y>
-      <width>151</width>
+      <width>91</width>
       <height>81</height>
      </rect>
     </property>
