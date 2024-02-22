@@ -8,13 +8,26 @@
         <file>rsc/EmptyBattery.png</file>
         <file>rsc/fullBattery.png</file>
         <file>rsc/SpeedometerBackground2.png</file>
-        <file>rsc/cross.png</file>
-        <file>rsc/home.png</file>
-        <file>rsc/music.png</file>
-        <file>rsc/phone.png</file>
-        <file>rsc/setting.png</file>
         <file>rsc/energyConsumption.png</file>
         <file>rsc/Line.png</file>
         <file>rsc/emptyLine.png</file>
+    </qresource>
+    <qresource prefix="/Menu">
+        <file>rsc/Menu/music.png</file>
+        <file>rsc/Menu/phone.png</file>
+        <file>rsc/Menu/setting.png</file>
+        <file>rsc/Menu/Squarre.png</file>
+        <file>rsc/Menu/yellowMusic.png</file>
+        <file>rsc/Menu/yellowPhone.png</file>
+        <file>rsc/Menu/yellowSquarre.png</file>
+        <file>rsc/Menu/yellowWheel.png</file>
+        <file>rsc/Menu/yellowHome.png</file>
+        <file>rsc/Menu/home.png</file>
+    </qresource>
+    <qresource prefix="/MusicPlayer">
+        <file>rsc/Menu/Music/backMusic.png</file>
+        <file>rsc/Menu/Music/breakMusic.png</file>
+        <file>rsc/Menu/Music/yellowPlay.png</file>
+        <file>rsc/Menu/Music/pastMusic.png</file>
     </qresource>
 </RCC>
