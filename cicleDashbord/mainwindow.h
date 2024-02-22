@@ -33,6 +33,7 @@ public:
 
     QLabel *speedMeter;
     QPixmap *speedMeterBackground ;
+
     //test
     QImage *beforeRotateNeedle;
     QTransform *rotateNeedle;
@@ -41,11 +42,11 @@ public:
     void displayCurrentDate();
 
 private slots:
-    void on_closeQPushButton_clicked();
+    void on_closeQPushButton_clicked();//test
 
-    void on_lessQpushButton_clicked();
+    void on_lessQpushButton_clicked();//test
 
-    void on_addQpushButton_clicked();
+    void on_addQpushButton_clicked();//test
 
     void on_menuQpushButton_clicked();
 

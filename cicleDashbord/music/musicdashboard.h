@@ -15,6 +15,9 @@ public:
     explicit MusicDashBoard(QWidget *parent = nullptr);
     ~MusicDashBoard();
 
+private slots:
+    void on_homeButton_clicked();
+
 private:
     Ui::MusicDashBoard *ui;
 };

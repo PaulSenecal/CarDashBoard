@@ -128,8 +128,6 @@ compiler_rcc_clean:
 	-$(DEL_FILE) debug\qrc_recources.cpp
 debug/qrc_recources.cpp: ../cicleDashbord/recources.qrc \
 		../../../../DOWNLOAD/ProgrammingSoftware/QT/6.6.1/mingw_64/bin/rcc.exe \
-		../cicleDashbord/rsc/cross.png \
-		../cicleDashbord/rsc/music.png \
 		../cicleDashbord/rsc/speedMeterBackground.png \
 		../cicleDashbord/rsc/energyConsumption.png \
 		../cicleDashbord/rsc/background.png \
@@ -139,11 +137,22 @@ debug/qrc_recources.cpp: ../cicleDashbord/recources.qrc \
 		../cicleDashbord/rsc/rotateNeedle.png \
 		../cicleDashbord/rsc/SpeedometerBackground2.png \
 		../cicleDashbord/rsc/fullBattery.png \
-		../cicleDashbord/rsc/phone.png \
 		../cicleDashbord/rsc/emptyLine.png \
 		../cicleDashbord/rsc/EmptyBattery.png \
-		../cicleDashbord/rsc/setting.png \
-		../cicleDashbord/rsc/home.png
+		../cicleDashbord/rsc/Menu/music.png \
+		../cicleDashbord/rsc/Menu/yellowPhone.png \
+		../cicleDashbord/rsc/Menu/yellowHome.png \
+		../cicleDashbord/rsc/Menu/Squarre.png \
+		../cicleDashbord/rsc/Menu/yellowSquarre.png \
+		../cicleDashbord/rsc/Menu/phone.png \
+		../cicleDashbord/rsc/Menu/yellowMusic.png \
+		../cicleDashbord/rsc/Menu/setting.png \
+		../cicleDashbord/rsc/Menu/home.png \
+		../cicleDashbord/rsc/Menu/yellowWheel.png \
+		../cicleDashbord/rsc/Menu/Music/pastMusic.png \
+		../cicleDashbord/rsc/Menu/Music/yellowPlay.png \
+		../cicleDashbord/rsc/Menu/Music/backMusic.png \
+		../cicleDashbord/rsc/Menu/Music/breakMusic.png
 	C:\DOWNLOAD\ProgrammingSoftware\QT\6.6.1\mingw_64\bin\rcc.exe -name recources --no-zstd ..\cicleDashbord\recources.qrc -o debug\qrc_recources.cpp
 
 compiler_moc_predefs_make_all: debug/moc_predefs.h
@@ -2037,6 +2046,7 @@ debug/musicdashboard.o: ../cicleDashbord/music/musicdashboard.cpp ../cicleDashbo
 		../../../../DOWNLOAD/ProgrammingSoftware/QT/6.6.1/mingw_64/include/QtCore/qnativeinterface.h \
 		ui_musicdashboard.h \
 		../../../../DOWNLOAD/ProgrammingSoftware/QT/6.6.1/mingw_64/include/QtCore/QVariant \
+		../../../../DOWNLOAD/ProgrammingSoftware/QT/6.6.1/mingw_64/include/QtGui/QIcon \
 		../../../../DOWNLOAD/ProgrammingSoftware/QT/6.6.1/mingw_64/include/QtWidgets/QApplication \
 		../../../../DOWNLOAD/ProgrammingSoftware/QT/6.6.1/mingw_64/include/QtWidgets/qapplication.h \
 		../../../../DOWNLOAD/ProgrammingSoftware/QT/6.6.1/mingw_64/include/QtCore/qcoreapplication.h \
@@ -2058,7 +2068,17 @@ debug/musicdashboard.o: ../cicleDashbord/music/musicdashboard.cpp ../cicleDashbo
 		../../../../DOWNLOAD/ProgrammingSoftware/QT/6.6.1/mingw_64/include/QtGui/qguiapplication.h \
 		../../../../DOWNLOAD/ProgrammingSoftware/QT/6.6.1/mingw_64/include/QtGui/qinputmethod.h \
 		../../../../DOWNLOAD/ProgrammingSoftware/QT/6.6.1/mingw_64/include/QtCore/qlocale.h \
-		../../../../DOWNLOAD/ProgrammingSoftware/QT/6.6.1/mingw_64/include/QtGui/qguiapplication_platform.h
+		../../../../DOWNLOAD/ProgrammingSoftware/QT/6.6.1/mingw_64/include/QtGui/qguiapplication_platform.h \
+		../../../../DOWNLOAD/ProgrammingSoftware/QT/6.6.1/mingw_64/include/QtWidgets/QGroupBox \
+		../../../../DOWNLOAD/ProgrammingSoftware/QT/6.6.1/mingw_64/include/QtWidgets/qgroupbox.h \
+		../../../../DOWNLOAD/ProgrammingSoftware/QT/6.6.1/mingw_64/include/QtWidgets/qframe.h \
+		../../../../DOWNLOAD/ProgrammingSoftware/QT/6.6.1/mingw_64/include/QtWidgets/QLabel \
+		../../../../DOWNLOAD/ProgrammingSoftware/QT/6.6.1/mingw_64/include/QtWidgets/qlabel.h \
+		../../../../DOWNLOAD/ProgrammingSoftware/QT/6.6.1/mingw_64/include/QtGui/qpicture.h \
+		../../../../DOWNLOAD/ProgrammingSoftware/QT/6.6.1/mingw_64/include/QtGui/qtextdocument.h \
+		../../../../DOWNLOAD/ProgrammingSoftware/QT/6.6.1/mingw_64/include/QtWidgets/QPushButton \
+		../../../../DOWNLOAD/ProgrammingSoftware/QT/6.6.1/mingw_64/include/QtWidgets/qpushbutton.h \
+		../../../../DOWNLOAD/ProgrammingSoftware/QT/6.6.1/mingw_64/include/QtWidgets/qabstractbutton.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\musicdashboard.o ..\cicleDashbord\music\musicdashboard.cpp
 
 debug/settingdashboard.o: ../cicleDashbord/setting/settingdashboard.cpp ../cicleDashbord/setting/settingdashboard.h \
@@ -2224,7 +2244,30 @@ debug/settingdashboard.o: ../cicleDashbord/setting/settingdashboard.cpp ../cicle
 		../../../../DOWNLOAD/ProgrammingSoftware/QT/6.6.1/mingw_64/include/QtCore/QSizeF \
 		../../../../DOWNLOAD/ProgrammingSoftware/QT/6.6.1/mingw_64/include/QtGui/QTransform \
 		../../../../DOWNLOAD/ProgrammingSoftware/QT/6.6.1/mingw_64/include/QtCore/qnativeinterface.h \
-		ui_settingdashboard.h
+		ui_settingdashboard.h \
+		../../../../DOWNLOAD/ProgrammingSoftware/QT/6.6.1/mingw_64/include/QtCore/QVariant \
+		../../../../DOWNLOAD/ProgrammingSoftware/QT/6.6.1/mingw_64/include/QtWidgets/QApplication \
+		../../../../DOWNLOAD/ProgrammingSoftware/QT/6.6.1/mingw_64/include/QtWidgets/qapplication.h \
+		../../../../DOWNLOAD/ProgrammingSoftware/QT/6.6.1/mingw_64/include/QtCore/qcoreapplication.h \
+		../../../../DOWNLOAD/ProgrammingSoftware/QT/6.6.1/mingw_64/include/QtCore/qeventloop.h \
+		../../../../DOWNLOAD/ProgrammingSoftware/QT/6.6.1/mingw_64/include/QtCore/qcoreapplication_platform.h \
+		../../../../DOWNLOAD/ProgrammingSoftware/QT/6.6.1/mingw_64/include/QtCore/qfuture.h \
+		../../../../DOWNLOAD/ProgrammingSoftware/QT/6.6.1/mingw_64/include/QtCore/qfutureinterface.h \
+		../../../../DOWNLOAD/ProgrammingSoftware/QT/6.6.1/mingw_64/include/QtCore/qmutex.h \
+		../../../../DOWNLOAD/ProgrammingSoftware/QT/6.6.1/mingw_64/include/QtCore/qdeadlinetimer.h \
+		../../../../DOWNLOAD/ProgrammingSoftware/QT/6.6.1/mingw_64/include/QtCore/qelapsedtimer.h \
+		../../../../DOWNLOAD/ProgrammingSoftware/QT/6.6.1/mingw_64/include/QtCore/qtsan_impl.h \
+		../../../../DOWNLOAD/ProgrammingSoftware/QT/6.6.1/mingw_64/include/QtCore/qresultstore.h \
+		../../../../DOWNLOAD/ProgrammingSoftware/QT/6.6.1/mingw_64/include/QtCore/qfuture_impl.h \
+		../../../../DOWNLOAD/ProgrammingSoftware/QT/6.6.1/mingw_64/include/QtCore/qthreadpool.h \
+		../../../../DOWNLOAD/ProgrammingSoftware/QT/6.6.1/mingw_64/include/QtCore/qthread.h \
+		../../../../DOWNLOAD/ProgrammingSoftware/QT/6.6.1/mingw_64/include/QtCore/qrunnable.h \
+		../../../../DOWNLOAD/ProgrammingSoftware/QT/6.6.1/mingw_64/include/QtCore/qexception.h \
+		../../../../DOWNLOAD/ProgrammingSoftware/QT/6.6.1/mingw_64/include/QtCore/qpromise.h \
+		../../../../DOWNLOAD/ProgrammingSoftware/QT/6.6.1/mingw_64/include/QtGui/qguiapplication.h \
+		../../../../DOWNLOAD/ProgrammingSoftware/QT/6.6.1/mingw_64/include/QtGui/qinputmethod.h \
+		../../../../DOWNLOAD/ProgrammingSoftware/QT/6.6.1/mingw_64/include/QtCore/qlocale.h \
+		../../../../DOWNLOAD/ProgrammingSoftware/QT/6.6.1/mingw_64/include/QtGui/qguiapplication_platform.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\settingdashboard.o ..\cicleDashbord\setting\settingdashboard.cpp
 
 debug/qrc_recources.o: debug/qrc_recources.cpp 

@@ -12,3 +12,9 @@ MusicDashBoard::~MusicDashBoard()
 {
     delete ui;
 }
+
+void MusicDashBoard::on_homeButton_clicked()
+{
+
+}
+

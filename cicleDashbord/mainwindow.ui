@@ -258,141 +258,6 @@ color: white;</string>
      <pixmap resource="recources.qrc">:/DashBordSpeed/rsc/SpeedometerBackground2.png</pixmap>
     </property>
    </widget>
-   <widget class="QPushButton" name="homeQpushButton">
-    <property name="geometry">
-     <rect>
-      <x>590</x>
-      <y>320</y>
-      <width>51</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background: transparent;
-border: transparent;</string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="icon">
-     <iconset resource="recources.qrc">
-      <normaloff>:/DashBordSpeed/rsc/home.png</normaloff>:/DashBordSpeed/rsc/home.png</iconset>
-    </property>
-    <property name="iconSize">
-     <size>
-      <width>61</width>
-      <height>51</height>
-     </size>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="menuQpushButton">
-    <property name="geometry">
-     <rect>
-      <x>690</x>
-      <y>330</y>
-      <width>31</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background: transparent;
-border: transparent;</string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="icon">
-     <iconset resource="recources.qrc">
-      <normaloff>:/DashBordSpeed/rsc/cross.png</normaloff>:/DashBordSpeed/rsc/cross.png</iconset>
-    </property>
-    <property name="iconSize">
-     <size>
-      <width>21</width>
-      <height>31</height>
-     </size>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="musicQpushButton">
-    <property name="geometry">
-     <rect>
-      <x>780</x>
-      <y>330</y>
-      <width>31</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background: transparent;
-border: transparent;</string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="icon">
-     <iconset resource="recources.qrc">
-      <normaloff>:/DashBordSpeed/rsc/music.png</normaloff>:/DashBordSpeed/rsc/music.png</iconset>
-    </property>
-    <property name="iconSize">
-     <size>
-      <width>31</width>
-      <height>31</height>
-     </size>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="phoneQpushButton">
-    <property name="geometry">
-     <rect>
-      <x>870</x>
-      <y>320</y>
-      <width>41</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background: transparent;
-border: transparent;</string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="icon">
-     <iconset resource="recources.qrc">
-      <normaloff>:/DashBordSpeed/rsc/phone.png</normaloff>:/DashBordSpeed/rsc/phone.png</iconset>
-    </property>
-    <property name="iconSize">
-     <size>
-      <width>31</width>
-      <height>41</height>
-     </size>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="settingQpushButton">
-    <property name="geometry">
-     <rect>
-      <x>950</x>
-      <y>320</y>
-      <width>41</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background: transparent;
-border: transparent;</string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="icon">
-     <iconset resource="recources.qrc">
-      <normaloff>:/DashBordSpeed/rsc/setting.png</normaloff>:/DashBordSpeed/rsc/setting.png</iconset>
-    </property>
-    <property name="iconSize">
-     <size>
-      <width>41</width>
-      <height>41</height>
-     </size>
-    </property>
-   </widget>
    <widget class="QLabel" name="displayDateQlabel">
     <property name="geometry">
      <rect>
@@ -445,7 +310,7 @@ border: transparent;</string>
       <pixmap resource="recources.qrc">:/DashBordSpeed/rsc/energyConsumption.png</pixmap>
      </property>
     </widget>
-    <widget class="QLabel" name="label_3">
+    <widget class="QLabel" name="averageConsumptionLabel">
      <property name="geometry">
       <rect>
        <x>110</x>
@@ -462,7 +327,7 @@ border: transparent;</string>
 Average</string>
      </property>
     </widget>
-    <widget class="QLabel" name="label_4">
+    <widget class="QLabel" name="fullCapacityLabel">
      <property name="geometry">
       <rect>
        <x>200</x>
@@ -479,7 +344,7 @@ Average</string>
 FullCapacity</string>
      </property>
     </widget>
-    <widget class="QLabel" name="label_2">
+    <widget class="QLabel" name="averageDistanceRemaininglabel">
      <property name="geometry">
       <rect>
        <x>20</x>
@@ -496,7 +361,7 @@ FullCapacity</string>
 Remaining</string>
      </property>
     </widget>
-    <widget class="QLabel" name="label">
+    <widget class="QLabel" name="energyconsumptionLabel">
      <property name="geometry">
       <rect>
        <x>20</x>
@@ -900,7 +765,7 @@ Remaining</string>
      </widget>
     </widget>
    </widget>
-   <widget class="QGroupBox" name="groupBox">
+   <widget class="QGroupBox" name="batteryGroupBox">
     <property name="geometry">
      <rect>
       <x>150</x>
@@ -1024,6 +889,158 @@ Remaining</string>
      </property>
     </widget>
    </widget>
+   <widget class="QGroupBox" name="mainMenuGroupBox">
+    <property name="geometry">
+     <rect>
+      <x>600</x>
+      <y>309</y>
+      <width>431</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background: transparent;
+border: transparent;</string>
+    </property>
+    <property name="title">
+     <string/>
+    </property>
+    <widget class="QPushButton" name="settingQpushButton">
+     <property name="geometry">
+      <rect>
+       <x>370</x>
+       <y>30</y>
+       <width>41</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background: transparent;
+border: transparent;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="recources.qrc">
+       <normaloff>:/Menu/rsc/Menu/setting.png</normaloff>:/Menu/rsc/Menu/setting.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>41</width>
+       <height>41</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="phoneQpushButton">
+     <property name="geometry">
+      <rect>
+       <x>290</x>
+       <y>30</y>
+       <width>41</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background: transparent;
+border: transparent;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="recources.qrc">
+       <normaloff>:/Menu/rsc/Menu/phone.png</normaloff>:/Menu/rsc/Menu/phone.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>31</width>
+       <height>41</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="homeQpushButton">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>51</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background: transparent;
+border: transparent;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="recources.qrc">
+       <normaloff>:/Menu/rsc/Menu/yellowHome.png</normaloff>:/Menu/rsc/Menu/yellowHome.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>61</width>
+       <height>51</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="musicQpushButton">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>30</y>
+       <width>31</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background: transparent;
+border: transparent;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="recources.qrc">
+       <normaloff>:/Menu/rsc/Menu/music.png</normaloff>:/Menu/rsc/Menu/music.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>31</width>
+       <height>31</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="menuQpushButton">
+     <property name="geometry">
+      <rect>
+       <x>110</x>
+       <y>30</y>
+       <width>31</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background: transparent;
+border: transparent;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="recources.qrc">
+       <normaloff>:/Menu/rsc/Menu/Squarre.png</normaloff>:/Menu/rsc/Menu/Squarre.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>21</width>
+       <height>31</height>
+      </size>
+     </property>
+    </widget>
+   </widget>
    <zorder>QlabelBackGround</zorder>
    <zorder>addQpushButton</zorder>
    <zorder>compteurQlineEdit</zorder>
@@ -1037,14 +1054,10 @@ Remaining</string>
    <zorder>windImageQlabel</zorder>
    <zorder>windCounterQlabel</zorder>
    <zorder>speedMeterQlabel</zorder>
-   <zorder>homeQpushButton</zorder>
-   <zorder>menuQpushButton</zorder>
-   <zorder>musicQpushButton</zorder>
-   <zorder>phoneQpushButton</zorder>
-   <zorder>settingQpushButton</zorder>
    <zorder>displayDateQlabel</zorder>
    <zorder>EnergyComsuptionQgroupBox</zorder>
-   <zorder>groupBox</zorder>
+   <zorder>batteryGroupBox</zorder>
+   <zorder>mainMenuGroupBox</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
