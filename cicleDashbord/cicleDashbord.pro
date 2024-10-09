@@ -11,27 +11,18 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    app/appdashboard.cpp \
-    call/calldashboard.cpp \
     main.cpp \
     mainwindow.cpp \
-    music/musicdashboard.cpp \
-    setting/settingdashboard.cpp
+    music/musicdashboard.cpp
 
 HEADERS += \
-    app/appdashboard.h \
-    call/calldashboard.h \
     mainwindow.h \
-    music/musicdashboard.h \
-    setting/settingdashboard.h
+    music/musicdashboard.h
 
 
 FORMS += \
-    app/appdashboard.ui \
-    call/calldashboard.ui \
     mainwindow.ui \
-    music/musicdashboard.ui \
-    setting/settingdashboard.ui
+    music/musicdashboard.ui
 
 
 # Default rules for deployment.

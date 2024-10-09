@@ -5,6 +5,7 @@ MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
+
 // changer pour ui
     this->setSpeed(10);
     ui->setupUi(this);
@@ -25,6 +26,8 @@ MainWindow::MainWindow(QWidget *parent)
     ui->NeedleQlabel->setGeometry(65,275,50,50);
 
     displayCurrentDate();
+    ui->pageStackedWidget->setCurrentIndex(1);
+
 }
 
 MainWindow::~MainWindow()
@@ -67,11 +70,7 @@ void MainWindow::displayCurrentDate()
 
 void MainWindow::on_menuQpushButton_clicked()
 {
-    AppPages = new AppDashBoard;
-    AppPages->show();
-    this->close();
-    AppPages->setWindowTitle("App Page");
-    this->~MainWindow();
+
 }
 
 
@@ -87,20 +86,12 @@ void MainWindow::on_musicQpushButton_clicked()
 
 void MainWindow::on_phoneQpushButton_clicked()
 {
-    CallPage = new CallDashBoard;
-    CallPage->show();
-    this->close();
-    CallPage->setWindowTitle("Call Page");
-    this->~MainWindow();
+
 }
 
 
 void MainWindow::on_settingQpushButton_clicked()
 {
-    SettingPage = new SettingDashBoard;
-    SettingPage->show();
-    this->close();
-    SettingPage->setWindowTitle("setting Page");
-    this->~MainWindow();
+
 }
 
