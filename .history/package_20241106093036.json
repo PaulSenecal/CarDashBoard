@@ -2,7 +2,7 @@
     "scripts": {
       "release": "standard-version"
     },
-    "version": "0.0.1",
+    "version": "0.0.0",
     "dependencies": {
       "standard-version": "^9.5.0"
     }
