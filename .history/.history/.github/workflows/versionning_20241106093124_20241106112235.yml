@@ -13,15 +13,8 @@ jobs:
       image: 'djelale/assistme:1.0.0'
 
     steps:
-    - name: Configure Git Credentials
-      run: |
-        git config --global credential.helper store
-        echo "https://${{ secrets.VERSIONNINGCARDASHBOARDPAT }}@github.com" > ~/.git-credentials
-        
     - name: Checkout code
       uses: actions/checkout@v3
-      with:
-        token: ${{ secrets.VERSIONNINGCARDASHBOARDPAT }}
 
     - name: Set up Node.js
       uses: actions/setup-node@v3
@@ -38,16 +31,10 @@ jobs:
     - name: Configure git safe directory
       run: |
         git config --global --add safe.directory /__w/assist-me/assist-me
-        git config --global credential.helper store
-        echo "https://${{ secrets.VERSIONNINGCARDASHBOARDPAT }}@github.com" > ~/.git-credentials
 
     - name: Determine release type and bump version
       shell: bash
       run: |
-        git config user.name "paul"
-        git config user.email "senecalpaul@outlook.fr"
-        git remote set-url origin https://${{ secrets.VERSIONNINGCARDASHBOARDPAT }}@github.com/PaulSenecal/assist-me.git
-        
         commitMessage="${{ steps.commit_message.outputs.msg }}"
 
         releaseNow() {
@@ -82,5 +69,4 @@ jobs:
       run: |
         git config user.name "paul"
         git config user.email "senecalpaul@outlook.fr"
-        git remote set-url origin https://${{ secrets.VERSIONNINGCARDASHBOARDPAT }}@github.com/PaulSenecal/assist-me.git
         git push --follow-tags
