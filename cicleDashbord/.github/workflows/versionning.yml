@@ -1,0 +1,72 @@
+name: Release Pipeline
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    container:
+      image: 'djelale/assistme:1.0.0'
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+
+    - name: Install standard-version
+      run: npm install standard-version
+
+    - name: Get last commit message
+      id: commit_message
+      run: echo "::set-output name=msg::$(git log -1 --pretty=%B)"
+    
+    - name: Configure git safe directory
+      run: |
+        git config --global --add safe.directory /__w/assist-me/assist-me
+
+    - name: Determine release type and bump version
+      shell: bash
+      run: |
+        commitMessage="${{ steps.commit_message.outputs.msg }}"
+
+        releaseNow() {
+          git push --follow-tags origin $(echo $GITHUB_REF | sed 's,.*/,,') || echo "An error occurred"
+        }
+
+        if [ "$commitMessage" = "" ]; then
+          echo "No commit message found. Skipping release."
+          exit 0
+        fi
+
+        if [[ "$commitMessage" =~ "BREAKING CHANGE" ]] || [[ "$commitMessage" =~ "chore!" ]] || [[ "$commitMessage" =~ "feat!" ]]; then
+          echo "Bump major version"
+          version=$(jq -r '.version' < package.json)
+          currentMajorVersion=$(echo $version | cut -d. -f1)
+          bumpMajorVersion=$((currentMajorVersion + 1))
+          echo "Current Version: $currentMajorVersion"
+          echo "Bumped Version: ${bumpMajorVersion}.0.0"
+          npx standard-version --release-as "${bumpMajorVersion}.0.0" --releaseCommitMessageFormat "$commitMessage [skip ci]"
+          releaseNow
+        elif [[ "$commitMessage" =~ "feat" ]] || [[ "$commitMessage" =~ "chore" ]] || [[ "$commitMessage" =~ "fix" ]]; then
+          npx standard-version --releaseCommitMessageFormat "$commitMessage [skip ci]"
+          releaseNow
+        else
+          echo "If you intend to do semantic release, please follow conventional commits."
+          echo "Your commit is considered a fix version"
+          npx standard-version --release-as "patch" --releaseCommitMessageFormat "$commitMessage [skip ci]"
+          releaseNow
+        fi
+
+    - name: Push tags back to the repository
+      run: |
+        git config user.name "paul"
+        git config user.email "senecalpaul@outlook.fr"
+        git push --follow-tags
