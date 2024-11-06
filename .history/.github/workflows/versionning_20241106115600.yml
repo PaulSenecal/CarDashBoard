@@ -18,7 +18,7 @@ jobs:
         git config --global credential.helper store
         echo "https://${{ secrets.VERSIONNINGCARDASHBOARDPAT }}@github.com" > ~/.git-credentials
         git config --global credential.helper store
-
+        
     - name: Checkout code
       uses: actions/checkout@v3
       with:
@@ -28,7 +28,7 @@ jobs:
         persist-credentials: true
         clean: true
         sparse-checkout-cone-mode: true
-        fetch-depth: 0
+        fetch-depth: 1
         fetch-tags: false
         lfs: false
         submodules: false
@@ -44,7 +44,7 @@ jobs:
 
     - name: Get last commit message
       id: commit_message
-      echo "msg=$(git log -1 --pretty=%B)" >> $GITHUB_OUTPUT
+      run: echo "::set-output name=msg::$(git log -1 --pretty=%B)"
     
     - name: Configure git safe directory
       run: |

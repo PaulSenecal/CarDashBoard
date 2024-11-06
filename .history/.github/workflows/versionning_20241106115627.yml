@@ -44,7 +44,7 @@ jobs:
 
     - name: Get last commit message
       id: commit_message
-      echo "msg=$(git log -1 --pretty=%B)" >> $GITHUB_OUTPUT
+      run: echo "::set-output name=msg::$(git log -1 --pretty=%B)"
     
     - name: Configure git safe directory
       run: |
