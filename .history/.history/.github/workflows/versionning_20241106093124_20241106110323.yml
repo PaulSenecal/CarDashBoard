@@ -16,7 +16,7 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v3
       with:
-        token: ${{ vars.VERSIONNINGCARDASHBOARDPAT }}
+        token: ${{ secrets.VERSIONNINGCARDASHBOARDPAT }}
         repository: PaulSenecal/CarDashBoard  # Remplacez par votre dépôt si nécessaire
         fetch-depth: 1  # Pour une exécution rapide, mais peut être ajusté si nécessaire
 
@@ -39,7 +39,7 @@ jobs:
     - name: Determine release type and bump version
       shell: bash
       env:
-        VERSIONNINGCARDASHBOARDPAT: ${{ vars.VERSIONNINGCARDASHBOARDPAT }}
+        VERSIONNINGCARDASHBOARDPAT: ${{ secrets.VERSIONNINGCARDASHBOARDPAT }}
       run: |
         commitMessage="${{ steps.commit_message.outputs.msg }}"
 
@@ -73,7 +73,7 @@ jobs:
 
     - name: Push tags back to the repository
       env:
-        VERSIONNINGCARDASHBOARDPAT: ${{ vars.VERSIONNINGCARDASHBOARDPAT }}
+        VERSIONNINGCARDASHBOARDPAT: ${{ secrets.VERSIONNINGCARDASHBOARDPAT }}
       run: |
         git config user.name "paul"
         git config user.email "senecalpaul@outlook.fr"
