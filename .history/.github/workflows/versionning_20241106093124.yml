@@ -30,7 +30,7 @@ jobs:
     
     - name: Configure git safe directory
       run: |
-        git config --global --add safe.directory /__w/CarDashBoard/CarDashBoard
+        git config --global --add safe.directory /__w/assist-me/assist-me
 
     - name: Determine release type and bump version
       shell: bash
@@ -67,6 +67,6 @@ jobs:
 
     - name: Push tags back to the repository
       run: |
-        git config user.name "paulz"
+        git config user.name "paul"
         git config user.email "senecalpaul@outlook.fr"
         git push --follow-tags
