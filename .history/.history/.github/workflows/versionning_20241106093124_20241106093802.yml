@@ -1,4 +1,4 @@
-name: Release Pipeline 
+name: Release Pipeline
 
 on:
   push:
@@ -34,13 +34,11 @@ jobs:
 
     - name: Determine release type and bump version
       shell: bash
-      env:
-        VERSIONNINGCARDASHBOARDPAT: ${{ secrets.VERSIONNINGCARDASHBOARDPAT }}
       run: |
         commitMessage="${{ steps.commit_message.outputs.msg }}"
 
         releaseNow() {
-          git push --follow-tags https://${VERSIONNINGCARDASHBOARDPAT}@github.com/PaulSenecal/CarDashBoard $(echo $GITHUB_REF | sed 's,.*/,,') || echo "An error occurred"
+          git push --follow-tags origin $(echo $GITHUB_REF | sed 's,.*/,,') || echo "An error occurred"
         }
 
         if [ "$commitMessage" = "" ]; then
@@ -68,9 +66,7 @@ jobs:
         fi
 
     - name: Push tags back to the repository
-      env:
-        VERSIONNINGCARDASHBOARDPAT: ${{ secrets.VERSIONNINGCARDASHBOARDPAT }}
       run: |
         git config user.name "paul"
         git config user.email "senecalpaul@outlook.fr"
-        git push --follow-tags https://${VERSIONNINGCARDASHBOARDPAT}@github.com/PaulSenecal/CarDashBoard
+        git push --follow-tags
